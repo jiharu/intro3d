@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset='utf-8'>
+<title>3D Modelling & Animation</title>
+    
+<link href="css/site.css" media="all" rel="stylesheet" type="text/css" />
+<link href="css/highlight.default.css" media="all" rel="stylesheet" type="text/css" />
+  
+<script src="js/jquery.js"></script>
+<script src="js/showdown.js" type="text/javascript"></script>
+
+<link rel="icon" type="image/x-icon" href="favicon.ico" />
+</head>
+<body>
+<!--
+Write the markdown code below.
+A guide to markdown syntax is at http://daringfireball.net/projects/markdown/
+-->
+
+<div style="display: none" id="sourcetext">
+
+# NURBS modeling
+## Goal
+
+- Understanding NURBS modeling: curves and surfaces.
+- Being able to create NURBS geometry and to modify its properties.
+_________________
+
+# Surface modeling   
+
+Using one of several geometry types, 3D artists can build surfaces, then push and pull points to change their shape.	
+
+- Art of Maya [pdf link](http://web.cse.ohio-state.edu/~parent/classes/682/MAYA/art_of_maya.pdf), p43.  
+
+___________________
+
+# NURBS (Non-Uniform Rational B-Splines)
+[Maya help: NURBS overview](http://help.autodesk.com/view/MAYAUL/2018/ENU//?guid=GUID-5EC05798-3F28-4AD2-8154-36BC444A4DC9)
+
+## NURBS
+**Non-uniform rational basis spline (NURBS)** is a mathematical model commonly used in computer graphics for generating and representing **curves** and **surfaces**. It offers good flexibility and precision for handling both analytic (surfaces defined by common mathematical formulas) and modeled shapes. NURBS are commonly used in computer-aided design (CAD), manufacturing (CAM), and engineering (CAE) and are part of numerous industry-wide standards.   
+[Wikipedia: Non-uniform rational B-spline](https://en.wikipedia.org/wiki/Non-uniform_rational_B-spline)
+		  
+### In Maya	
+NURBS (Non-Uniform Rational B-Splines) are one geometry type you can use to create 3D curves and surfaces in Maya. 
+NURBS are useful for constructing many types of organic 3D forms because of the smooth and minimal nature of the curves they use to construct surfaces. NURBS surface types are widely used in the fields of animation, games, scientific visualization, and industrial design.
+
+>Maya calls any NURBS curve simply a “curve.” In some menus, Maya will refer to a surface created from curves as a “surface” and sometimes as “NURBS,” such as in the 'Modify/Convert' menu. Although other 3D programs might have more than one type of spline technology, you should know that even though Maya sometimes drops the word “NURBS,” we are still dealing with this technology whenever we use “curves” and “surfaces” within Maya.
+
+### New terminology 
+
+	NURBS, CV (Control Vertex), EP (Edit Point), start of curve, curve direction,  
+	curve degree, hull, span, knot spacing..  
+
+______________________
+
+## Components
+## NURBS Curve
+  
+![nrbs04](img/maya/nurbs/curve01.png)   
+ 
+
+### Curve degree
+
+![nbs01](img/maya/nurbs/nurbs01.png)
+
+
+### References
+- [NURBS curve flash demo by Jan Foretník, download](http://geometrie.foretnik.net/files/NURBS-en.swf)  
+- [A (mathematical) summary by Markus Altmann about NURBS](http://web.cs.wpi.edu/~matt/courses/cs563/talks/nurbs.html)  
+- [Parameterization of NURBS curves and surfaces](http://knowledge.autodesk.com/support/maya-lt/learn-explore/caas/CloudHelp/cloudhelp/2015/ENU/MayaLT/files/NURBS-overview-Parameterization-of-NURBS-curves-and-surfaces-htm.html)
+
+___________________
+
+## NURBS Surface
+The components of the NURBS surface are very similar to those of the NURBS curve. NURBS surfaces have CVs, hulls, and spans which define the shape of a four-sided surface. NURBS models, whether they are organic or industrial in nature, are generally made up of several adjoining four-sided patches. As with the NURBS curve, it is desirable to define surfaces with the fewest evenly spaced isoparms or CVs. The quality and type of curve will affect the characteristics of the surface. 
+
+![nrbs05](img/maya/nurbs/surface.png)  
+![nrbs003](img/maya/nurbs/nurbs_iso.jpg)  
+![nrbs03](img/maya/nurbs/nurbs.png)  
+
+### Rebuild examples
+![rebu01](img/maya/nurbs/rebuild.png)
+  
+## Create surfcace  
+### Planar
+![nrbs02](img/maya/nurbs/curve.png)     
+
+### Extrude  
+- You need two curves (profile and path) perpendicularly positioned.
+![ext01](img/maya/nurbs/extr.png)       
+
+____________________
+## How to modify/edit components
+- Using F8 key, Marking menu with right mouse button, or select icon from the menu. 
+
+### Command menu in Maya
+![menu](img/maya/nurbs/menu.png)  
+__________
+# Inspiration
+- [Pixar Animation- Luxo Jr., 1986](https://www.youtube.com/watch?v=D4NPQ8mfKU0)
+- Reading: [Animation: A World History - Before Pixar](http://proquestcombo.safaribooksonline.com.ezproxy.torontopubliclibrary.ca/book/animation-and-3d/9781317519874/pixar-character-animation-in-the-digital-era/_6241_1136_h2_ch002_012_html?uicode=torontopl)  
+	To read, you need to make an account by visiting any branch of Toronto Public Library with your id and any documentation to prove your address.
+
+<!--## Reference
+- [Doniel Moore blog](https://subjct1337.wordpress.com/category/unit-51-3d-computer-modelling/)-->
+
+____________________________
+
+
+# Lab
+## To do list
+- Lab practice A: **General setting for all modeling - Tool settings (option box),  Attribute Editor, history node (INPUTS node), and Help line.**  
+- Lab practice B: **Editing curves.**  
+- Lab practice C: **Creating an apple - Revolve, Loft, and Trim.**   
+- Lab practice D: **Creating a wine glass.**  
+- Lab practice E: Boolean practice.  
+- Lab practice F: Creating surfaces.  	 	
+- Lab practice G: Editing surfaces.    
+
+_______________________
+
+## Lab practice A: General setting
+### Tool settings (option box)
+![tool](img/lab/toolbx.png) 
+
+### Attribute Editor (ctrl + a)
+![tool01](img/lab/atte.png) 
+
+### History nodes (INPUTS nodes)
+#### To delete:
+![tool02](img/lab/history.png) 
+
+### The cursor for the icon & Help line
+- Get a description of/instructions for the action under the cursor. (Turn on/off at the Preference/help)
+- To help you understand the operation of the tools, view the Help Line as you scroll through the menus.
+	
+![help](img/maya/nurbs/help.png) 
+
+___________________________
+
+## Lab practice B: Editing curves
+## Curve Editing
+
+### Editing CVs & EP
+- To modify, use the F8 key, Marking menu with right mouse button, or select icon from the menu. 
+
+![curve](img/lab/curves.png) 
+
+### Detaching & attaching curves
+- Splits a curve into two new curves. You need to choose **an edit point** from the marking menu.
+(Curves / Detach)
+
+![curve01](img/maya/nurbs/curve/detach.png)
+
+- Joins NURBS curves together at their endpoints to form a new curve. You can select two or more curves for attaching.
+(Curves / Attach)
+
+![curve02](img/maya/nurbs/curve/attach.png)
+
+### Cut Curve
+- Splits curves wherever they cross a cutting curve in the view.
+(Curves / Cut)
+
+### Insert knot
+- Choose **curve points** from the marking menu; then you will see the yellow dots to insert. 
+
+### Rebuild
+- Performs various operations to modify the selected curve.
+(Curves / Rebuild)
+
+### Reverse Direction
+
+---------------------
+## Lab practice C: Creating an apple - Revolve, Loft, and Trim
+
+![ap01](img/maya/nurbs/apple.png)   
+![ap02](img/lab/apple.png)   
+
+---------------------
+
+## Lab practice D: Creating a wine glass - Revolve
+Technical rigor and aesthetic concern: ***design*** and ***proportion***.
+**Proportion:** the ratio of one quantity to another, especially the ratio of a part compared to a whole. In a mathematical context, a proportion is the statement of equality between two ratios.
+[proportion: architecture](http://en.Wikipedia.org/wiki/Proportion_(architecture)),
+[proportion: body](http://en.Wikipedia.org/wiki/Body_proportions)
+
+  
+![w02](img/maya/nurbs/wine.jpg)    
+![w03](img/maya/nurbs/Tywine.png) 
+
+![w01](img/maya/nurbs/wine.png)   
+
+______________________
+
+## Lab practice E: Boolean practice
+
+- NURBS: Surfaces/Edit NURBS/Booleans
+	1. Create more than two surfaces.
+	2. Select Boolean operation.
+	3. Choose model 1 and press Enter key.
+	4. Choose model 2 and press Enter key. 
+	
+__________________
+## Lab practice F: Creating surfaces	
+### Revolve
+
+### Loft
+
+### Birail
+- Creates a surface by sweeping a series of profile curves along two path curves. The resulting surface can maintain continuity with other surfaces. The Birail Tool has options for sweeping 1, 2, or 3 (or more) cross-sectional curves along the two path (rail) curves. The resulting surface is interpolated through the profile curves. (Surfaces / [Birail](http://help.autodesk.com/view/MAYAUL/2018/ENU//index.html?guid=GUID-E9C6BCFF-261A-4E8E-8139-468A57E0E0D4))   
+[Maya tutorial: Birail](http://knowledge.autodesk.com/support/maya-lt/learn-explore/caas/CloudHelp/cloudhelp/2015/ENU/MayaLT/files/Surfaces--Birail-htm.html)   
+
+![surface01](img/lab/birail.png) 
+
+### Boundary
+- Creates a surface by filling between boundary curves. (Surfaces / Boundary)
+
+### Bevel
+- Creates beveled transition surfaces from a profile curve. (Surfaces / Bevel)
+
+__________________
+## Lab practice G: Editing surfaces
+### Edit surface components
+- To modify, use the F8 key, Marking menu with right mouse button, or select icon from the menu. 
+
+### Project Curve on Surface and Trim tool
+- (Surfaces / Project Curve on Surface)
+
+### Boolean
+- NURBS: Surfaces / Booleans
+	1. Create more than two surfaces.
+	2. Select Boolean operation.
+	3. Choose model 1 and press Enter key.
+	4. Choose model 2 and press Enter key. 
+
+### Using the Sculpt Geometry tool
+- (Surfaces / Sculpt Geometry Tool)
+- The importance of numbers of sections and spans  
+- [Sculpt Geometry Tool overview](http://help.autodesk.com/view/MAYAUL/2018/ENU//index.html?guid=GUID-5FE84872-54E1-49F9-B585-4031A08AAE56)  
+
+![curve03](img/maya/nurbs/curve/sculpt.png)
+
+### Rebuild
+
+### Reverse Direction
+__________________________
+
+## Advanced tutorial example
+- NURBS modeling tutorials: [car rim](http://www.cgarena.com/freestuff/tutorials/maya/modeling-rim/modeling-rim.php)     	
+
+__________________________
+
+# Assignment
+<!--### Due date: Sep 29th (11:59 pm).  -->
+- Please upload your three screenshot images (perspective view & shading/wireframe on shaded) of your NURBS models to Canvas by next class:
+	1. An apple.
+	2. A banana or bananas.
+	3. A wine glass.
+
+![banana](img/lab/banana.png)
+Assignment reference image.
+
+________________________
+
+# Action items
+- Web tutorial: [Lynda.com: Maya 2018 essential training by George Maestri.](https://www.lynda.com/Maya-tutorials/Extract-NURBS-curves-from-surfaces/604210/644593-4.html?org=ocadu.ca) 
+	- NURBS Modeling Techniques.
+	- Refine NURBS Models.
+
+- Reading: [Animation: A World History - Before Pixar](http://proquestcombo.safaribooksonline.com.ezproxy.torontopubliclibrary.ca/book/animation-and-3d/9781317519874/pixar-character-animation-in-the-digital-era/_6241_1136_h2_ch002_012_html?uicode=torontopl)   
+
+
+</div>
+<div id="wrapper">
+	
+	<div class="header">
+		
+		<h1>INTM3D</h1>		
+		<a href="index.html">Class outline</a><br/>
+		<a href="https://docs.google.com/spreadsheets/d/1ordfMYWu436oiZvY61ZD-aKLIGjm1hzmY7ndHkQPkUU/edit?usp=sharing">Attendance INTM-2016-001 Mon</a><br/>
+		<a href="https://docs.google.com/spreadsheets/d/1jAXPsR6__setsEp7VIRgO8SfaiTRRyrnVDjfDYiXYCw/edit?usp=sharing">Attendance INTM-2016-002 Wed</a><br/>
+		<a 
+href="https://www.lynda.com/SharedPlaylist/26abee798b454bd48a61d5b40c66c919?org=ocadu.ca">LinkedIn Learning tutorial</a><br/><br/>	
+		<h3>Class schedule</h3>	
+				<a href="week01.html">1: Introduction</a><br/>
+				<a href="week02.html">2: 3D modeling overview</a><br/>
+				<a href="week03.html">3: NURBS modeling</a><br/>
+				<a href="week04.html">4: Polygon modeling</a><br/>
+				<a href="week05.html">5: Shading</a><br/> 
+				<a href="week06.html">6: Rendering</a><br/>								
+				<a href="week07.html">7: Cinematography</a><br/>  
+				<a href="week08.html">8: Texturing</a><br/>
+				<a href="week10.html">9: Animation I</a><br/>	
+				<a href="week11.html">10: Animation II</a><br/>
+				<a href="week12.html">11: Review & more</a><br/>
+                <!--<a href="week09.html">9: Modeling techniques</a><br/>-->
+	
+	</div>
+	<div class="section">
+		<script type="text/javascript">
+		//var converter = new Markdown.Converter();
+		var converter = new Showdown.converter();
+		document.write(converter.makeHtml($('#sourcetext').text()));
+		</script>
+	</div>
+	
+	<div class="footer">Haru (Hyunkyung) Ji, 2019</div>
+	
+</div>
+</body>
+</html>

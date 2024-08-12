@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset='utf-8'>
+<title>3D Modelling & Animation</title>
+    
+<link href="css/site.css" media="screen" rel="stylesheet" type="text/css" />
+<link href="css/highlight.default.css" media="screen" rel="stylesheet" type="text/css" />
+  
+<script src="js/jquery.js"></script>
+<script src="js/showdown.js" type="text/javascript"></script>
+
+<link rel="icon" type="image/x-icon" href="favicon.ico" />
+</head>
+<body>
+<!--
+Write the markdown code below.
+A guide to markdown syntax is at http://daringfireball.net/projects/markdown/
+-->
+
+<div style="display: none" id="sourcetext">
+
+# Animation I
+## Goal
+- Introduction to computer animation.
+__________________________
+
+# Introduction to Computer Animation
+Reference: The Fundamentals of Animation by Paul Wells, 2006
+
+- It refers to any computer-based computation used in the production of images intended to create the perception of motion.
+
+-  In general, any value that can be changed can be animated. An object’s position and orientation are obvious candidates for animation, but all the following can be animated as well: the object’s shape, its shading parameters, its texture coordinates, the light source parameters, and the camera parameters.
+
+-  Three general approaches to motion control in 3D computer animation:    
+	- ***artistic animation*** - the animator has the prime responsibility for crafting the motion.  
+		- [Le régulateur, France, 2004 Philippe Grammaticopoulos](https://www.youtube.com/watch?v=kxwTm9nwywU) applying NPR (Non Photorealistic Rendering) animation technique.
+			- [Making of Le régulateur](https://www.youtube.com/watch?v=nmDN9EEyeOM&t=182s)
+	
+	- ***data-driven animation*** - live motion is digitized and then mapped onto graphical objects. The primary technology for data-driven animation is *motion capture* (MoCap). 
+		- [BVH Animation Technology for Overgrowth - Wolfire Games](https://www.youtube.com/watch?v=-UcXDCEkm5s)
+			- [The Motionbuilder-friendly BVH Conversion Release of CMU's Motion Capture Database](https://sites.google.com/a/cgspeed.com/cgspeed/motion-capture/cmu-bvh-conversion)    
+	
+	- ***procedural animation*** - there is a computational model that is used to control the motion. Usually, this is in the form of setting initial conditions for some type of physical or behavioral simulation. 	 
+		- [Wikipedia](https://en.wikipedia.org/wiki/Procedural_animation)   
+		- [Karl Sims webpage](http://www.karlsims.com/)   
+		Karl Sims is a digital media artist, computer graphics research scientist, and software entrepreneur. He was the founder of GenArts, Inc., a creator of visual effects software for the motion picture industry. He previously held positions at Thinking Machines Corporation, Optomystic, and Whitney/Demos Productions. Karl studied computer graphics at the MIT Media Lab, and Life Sciences as an undergraduate at MIT. He is the recipient of various awards including two ARS Electronica Golden Nicas and a MacArthur Fellowship Award.
+			- [Locomotion Studies - MIT - Karl Sims (1987)](https://www.youtube.com/watch?v=aUdCS1lLiYs)
+			- [More procedural animations by Karl Sims](https://archive.org/search.php?query=director%3A%22Karl+Sims%22)
+			- [Dutch interview (VPRO) with Karl Sims](https://www.youtube.com/watch?v=WmrTNrtE-Lk) 
+		- [An embodied approach to arthropod animation](https://www.youtube.com/watch?v=I1P_B65XW4I)   
+		a system for dynamically animating ground based arthropods in real-time, capable of traversing realistically across a complex, arbitrary environment. The physical simulation of the virtual world further grounds the creatures, enabling complex emergent animations to form.
+		- [Ian Cheng Digital Commission: Bad Corgi](https://www.youtube.com/watch?v=ByJrszDVxmA)  
+		In the Serpentine Galleries' second Digital Commission artist Ian Cheng invites you to enter the world of Bad Corgi: a shadowy mindfulness app for contemplating chaos. Available for download now [http://www.getbadcorgiapp.com/](http://www.getbadcorgiapp.com/)  
+
+## Animation Process
+![aniProcess](img/aniprocess.png)    
+- The Fundamentals of Animation by Paul Wells, 2006
+
+## Terminology
+### Animate
+**Animate** means ***“give life to”*** and includes live-action puppetry. 
+A more restricted definition of **animation** is ***the use of a sequence of stills*** to create the visual impression of motion.
+
+### Time
+In the world of 3D animation, time is the fourth dimension. An object will appear animated if it either moves, rotates or changes shape from one point in time to another. Therefore, learning how time works is crucial to the animation process.   
+
+### Sequence
+Both film and video media formats use a series of still images that appear animated when played back as **a sequence**.   
+
+### Frame 
+Film and video images are often referred to as frames and most animation is measured using ***frames as the main unit of time***. The relationship between these frames and real time differs depending on whether you are working with video, film or other digital media.
+
+---------------------------------
+
+# Animation Techniques
+
+"There is no particular mystery in animation.., it's really very simple, and
+like anything that is simple, it is about the hardest thing in the world to
+do." Bill Tytla at the Walt Disney Studio, June 28, 1937. [14] 
+
+![concen](img/con.png)   
+The Animator’s Survival Kit by Richard Williams. The first lesson: concentration!
+
+- [www.theanimatorssurvivalkit.com](http://www.theanimatorssurvivalkit.com/biography.html)
+<!--- [blog 1](https://yckcyouth.wordpress.com/2011/06/01/god-is-pure-concentrationanimation-is-second/)  
+- [blog 2](http://blog.ishback.com/?p=468)-->
+
+# Animation in Maya
+
+## Animation related interface
+
+[Maya help: interface overview](http://help.autodesk.com/view/MAYAUL/2018/ENU/?guid=GUID-F4FCE554-1FA5-447A-8835-63EB43D2690B)   
+
+#### Menu Sets
+You can switch Menu Sets to animation or rigging to see animation relevant menu sets. 
+
+#### Time Slider
+The Time Slider shows you the time range as defined by the range slider, the current time, and the keys on selected objects or characters. You can also use it to "scrub" through animation.
+
+#### Range Slider
+The Range Slider lets you set the start and end time of the scene's animation and a playback range if you want to focus on a smaller portion of time.
+
+#### Playback
+The Playback Controls let you move around in time and preview your animation as defined by the Time Slider range.
+
+### Video tutorial 
+- [Maya 1-Minute Startup Movies](http://knowledge.autodesk.com/support/maya/learn-explore/caas/CloudHelp/cloudhelp/ENU/123112/files/maya-1-minute-videos-html.html)
+	- Discover secret menus  
+	- Keyframe animation
+	
+- [Exploring Maya 2016 video tutorial](https://www.youtube.com/watch?v=dbg3eCfOwXM)
+	- The basics of animation	
+	
+- [Exploring Maya's Animation Preferences](https://www.youtube.com/watch?v=888hRJRwVG8)	
+
+___________________________
+
+
+## References
+- [Maya 2018 online Help](http://help.autodesk.com/view/MAYAUL/2018/ENU//)
+- Art of Maya [pdf link](http://web.cse.ohio-state.edu/~parent/classes/682/MAYA/art_of_maya.pdf): P.35~38 : Animation techniques  
+
+>When 3D artists animate, they paint with motion instead of color. 
+
+# Creating motion in Maya 
+In some cases, 3D artists will animate all the parts of an object separately. In other cases, they use higher level controls to help streamline their workflow.
+
+## Setting Keys
+Setting keys (or keyframing) is the most fundamental technique for animating on a computer. This technique involves recording attribute values as keys for one or more objects at particular points in time. As you set multiple keys, you can play back the scene to see your object animated. 
+Setting keys gives you a great deal of control over timing. When you animate using keys, you generate animation curves that plot the key values against time. These curves are great tools for analyzing and editing the motion of an object. Other animation techniques are usually combined with some keyframing. Most animation you do in Maya will involve some form of setting keys.
+
+Terms: Keying Attributes, Secondary Motion, Hierarchical Animation, Animation Curves
+
+## Motion Path Animation
+(Motion) Path animation involves attaching the object to a curve where points on the path are used to determine where the object will be at particular points in time. It is easy to understand the way an object moves around in 3D space through a path, since its curve clearly depicts where the object is going.
+
+## Set Driven Key
+Set Driven Key allows you to control or "drive," the value of one attribute with another attribute. The
+relationship between the two attributes is defined by an animation curve. The driving attribute can be used to drive multiple other attributes. For example, the rotation of an elbow joint could drive a bulging bicep muscle and the wrinkling of a sleeve.
+Custom attributes can be added to a control node, then connected to other attributes in the scene using Set Driven Key. This creates centralized controls.
+
+## Non-linear Animation
+Non-linear animation uses animation clips that contain keyframed motion. These clips can be cycled and blended with other clips in the Maya Trax Editor. For a bouncing ball, a single bounce clip could be cycled, then blended with a clip of the ball rolling. These clips can be moved, scaled, cycled and blended. You can also add and subtract clips from the Trax Editor to quickly explore different animation options.
+
+### Trax editor
+Apart from being the best place to import and manipulate audio, the trax editor was built to load animation “clips” onto character sets. This can be very fun and intuitive.
+Manipulating clips is kind of like “mixing” animation. You can create a library of clips and mix and match the animation to create entire performances, or, perhaps more usually, multiple permutations of background animation. 
+
+## Expressions & MEL
+Another way of animating object attributes is through expressions. Expressions can be mathematical equations, conditional statements or MEL commands that define the value of a given attribute. Expressions are evaluated on every frame. You can animate using an expression when you have a mathematical relationship that you want to achieve. In the case below, the absolute value of a sine wave creates the bounce of the ball.
+
+
+## Dynamic Simulation
+To animate a ball that is bouncing off a series of objects or against a non-flat terrain, a dynamics simulation is required for the most realistic results. The ball can be turned into a rigid body that is propelled forward using dynamic attributes. Forces such as gravity or wind can then be applied to the ball to bring it to the ground. Objects in the scene can also be turned into rigid bodies so the ball will collide with them. If they are passive, they will not be affected by the collision. If they are Active Rigid Bodies, they will move as the ball hits them. In the end, the simulation can be baked to turn the motion into keys.
+
+## Motion Capture 
+
+- [mocapdata.com](http://mocapdata.com/)  
+mocapdata.com provides 933 premium and 4671 free motion datasets and is advertised as 'the world biggest state of the art motion capture library on the earth.'
+- [turbosquid.com](http://www.turbosquid.com/Search/Motion-Capture/free/fbx)  
+ TurboSquid provides 3D assets including 3D models. You can find free 3D models as well as free motion capture FBX data that can be imported to Maya. 
+ 
+## Deformation, Blend Shape 
+
+Blend Shapes are essentially copies of your main character geometry with specific, focused changes to a small part of the geometry. e.g., facial expressions.
+
+### Maya tutorials
+- [Non-linear deformer](https://www.youtube.com/watch?v=tI2zSsKGmQM)
+- [Lattice Deformer](https://www.youtube.com/watch?v=jviQSB6quJY)  
+- [Creating and Animating Facial Blendshapes by Andrew Silke](https://www.youtube.com/watch?v=YpBsWuPvbFo)
+
+![bs](img/maya/deformer/blendshape.png)
+
+_____________________
+## Inspiration
+### Animatics  
+An animatic is a film industry term referring to a rough animation designed to help plan a shot, like a moving storyboard. Typically, models in an animatic are very low resolution and untextured with simple lighting. Animatics are used to plan both computer-generated (CG) and live-action shots. Camera work, timing, and the composition of elements within the frame are the most important aspects of an animatic.
+
+- ['The Grand Budapest Hotel' Storyboard Animatics](https://www.youtube.com/watch?v=rxqp2msGOhQ)  
+
+_________________________________
+
+## Creating a simple keyframe animation
+1. Let's make a simple object and the simplest keyframe animation.  
+	- Make a sphere and change its transformation values at different frames, and key them.
+	- [Tutorial: Keyframe Animation Basics in Maya by Ellery Connell](https://www.youtube.com/watch?v=HSTRBRq3WqQ)
+
+2. Let's open the Graph Editor to see the visual representations of keys and animation curves and to manipulate them.   
+	- To open the Graph Editor: from the main menu bar, select Window > Animation Editors > Graph Editor.   
+	- [Tutorial: Graph Editor Part 1](https://www.youtube.com/watch?v=-30HfXpo-Sg)
+	
+3. [Playblast an animation](http://help.autodesk.com/view/MAYAUL/2018/ENU/?guid=GUID-1C6EDC8D-DA67-490E-81F1-1205336DEBD9); Playblasting performs a screen grab of the animation in the active view at each frame during playback, then “blasts” the resulting images to the specified image viewer. The images can be saved either as a movie file or as a sequence of images in various formats.
+	- Playback > Playblast in the Animation menu set.
+	
+_______________________	
+	
+## Graph editor: controlling splines 
+### How it works:
+- Display and navigate animation curves
+- Select keys and change times and values
+- Select keys and move or scale them
+- Controlling tangets
+
+### Navigation
+The standard Viewport navigation shortcut keys and transform tools can be used while working in the Graph Editor.
+
+- **Dolly** (Alt + RMB or scrolling)/ **Track** (Alt + MMB) – This can be used to Dolly and track around the Graph Editor to change the view of the scenes motion graphs.
+
+- You can also use the standard Viewport shortcuts to frame selected keys (**F**) or frame all keys (**A**).
+
+- When you control keys and tangents, use select keys (**Q**) and move (**W**) or scale (**R**)  them.
+
+### Splines
+![grp01](img/maya/graph.png)
+
+### Acceleration (ease-in), Deceleration (ease-out)        
+![grp02](img/maya/acel.png), ![grp03](img/maya/deac.png)   
+
+### Spline techniques
+1. Keys at *the extremes*.  It makes things clear, easy to edit, and the values can't be changed without you knowing.  
+2. Use flat or linear tangents at extremes.
+3. Only use the number of keys you need and make sure the tangents are the way you want them. Too many keys makes changes very difficult. 
+
+____________________
+
+## Creating bouncing ball animation 
+- Select the project and save a scene.  
+
+### Step 1: Preparing the scene for the most efficient work environment. 
+- Create ***a ball animation hierarchy***: make a sphere and create two to three group nodes:
+	
+### Step 2: Timing
+
+- Decide how many bounces will occur - and do keyframing 
+	- keyframing of the transformation node.
+	- Use your notes to capture the timing.	
+
+### Step 3: Spacing
+
+- Using the Graph Editor to alter the graph, applying spacing
+
+![break](img/lab/break.png)   
+
+![tan](img/lab/tangent.png) 
+
+### Step 4
+- Squashing and stretching.
+	- keyframing of the scale node.
+_____________________________	
+
+## Creating set driven animation
+[Set Driven Key example](https://knowledge.autodesk.com/support/maya/learn-explore/caas/CloudHelp/cloudhelp/2016/ENU/Maya/files/GUID-8B9D9C60-DF7D-45EC-A278-56DBE07935A5-htm.html) 
+
+1. Select the driven object, then select Key > Set Driven Key > Set.
+The Set Driven Key window appears with the object in the Driven list.
+
+2. Select the driver object in the scene view, then click Load Driver.
+The object appears in the Driver list.
+
+3. Select the attribute in the Driven list (the attribute to be driven by the driver’s movement), and select the attribute in the Driver list (the attribute that will drive the driven object), then click Key.
+
+4. Repeat to complete an animation.
+
+5. You can use the Graph Editor to edit animation curves.	
+
+![set01](img/maya/deformer/set.png)
+Set driven example image.
+
+
+## Blend Shape deformation	
+![bs01](img/maya/deformer/bs01.png)
+![bs02](img/maya/deformer/bs02.png)  
+
+- When you prepare the target model, you need to work on the component mode not on the object mode to deform the shape to apply the blend shaping.
+
+- In Maya 2018, you can control the blend shaping in the Shape Editor.
+	- [Maya 2018 help: shape editor](http://help.autodesk.com/view/MAYAUL/2018/ENU//?guid=GUID-3C92402C-B24E-4874-AC8D-EADF976A19DC)  
+
+------------------------------------------------
+
+## Path animation
+Animate > Motion Paths > Attach to Motion Path > [option](http://help.autodesk.com/view/MAYAUL/2018/ENU//index.html?guid=GUID-69E8C704-1A7B-4C83-9333-80C3118541F6)
+
+### Lattice deformation
+![path](img/maya/deformer/path.png)   
+
+- Prepare an object (Create/Type) and a curve for a path animation.  
+- To create a flying text animation, select text objects and a curve and apply 'Constrain / Motion Paths / Attach to Motion Path'. Then you can apply 'Flow path object' to make your object flexibly follow the path.  
+
+![path03](img/lab/motionpath01.png) 
+
+- Later, you can select the lattice and deform it.
+	
+
+</div>
+<div id="wrapper">
+	
+	<div class="header">
+		
+		<h1>INTM3D</h1>		
+		<a href="index.html">Class outline</a><br/>
+		<a href="https://docs.google.com/spreadsheets/d/1ordfMYWu436oiZvY61ZD-aKLIGjm1hzmY7ndHkQPkUU/edit?usp=sharing">Attendance INTM-2016-001 Mon</a><br/>
+		<a href="https://docs.google.com/spreadsheets/d/1jAXPsR6__setsEp7VIRgO8SfaiTRRyrnVDjfDYiXYCw/edit?usp=sharing">Attendance INTM-2016-002 Wed</a><br/>
+		<a 
+href="https://www.lynda.com/SharedPlaylist/26abee798b454bd48a61d5b40c66c919?org=ocadu.ca">LinkedIn Learning tutorial</a><br/><br/>	
+		<h3>Class schedule</h3>	
+				<a href="week01.html">1: Introduction</a><br/>
+				<a href="week02.html">2: 3D modeling overview</a><br/>
+				<a href="week03.html">3: NURBS modeling</a><br/>
+				<a href="week04.html">4: Polygon modeling</a><br/>
+				<a href="week05.html">5: Shading</a><br/> 
+				<a href="week06.html">6: Rendering</a><br/>								
+				<a href="week07.html">7: Cinematography</a><br/>  
+				<a href="week08.html">8: Texturing</a><br/>
+				<a href="week10.html">9: Animation I</a><br/>	
+				<a href="week11.html">10: Animation II</a><br/>
+				<a href="week12.html">11: Review & more</a><br/>
+                <!--<a href="week09.html">9: Modeling techniques</a><br/>-->
+	
+	</div>
+	<div class="section">
+		<script type="text/javascript">
+		//var converter = new Markdown.Converter();
+		var converter = new Showdown.converter();
+		document.write(converter.makeHtml($('#sourcetext').text()));
+		</script>
+	</div>
+	
+	<div class="footer">Haru (Hyunkyung) Ji, 2019</div>
+	
+</div>
+</body>
+</html>

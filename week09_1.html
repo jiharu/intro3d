@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset='utf-8'>
+<title>3D Modelling & Animation</title>
+    
+<link href="css/site.css" media="all" rel="stylesheet" type="text/css" />
+<link href="css/highlight.default.css" media="all" rel="stylesheet" type="text/css" />
+  
+<script src="js/jquery.js"></script>
+<script src="js/showdown.js" type="text/javascript"></script>
+
+<link rel="icon" type="image/x-icon" href="favicon.ico" />
+</head>
+<body>
+<!--
+Write the markdown code below.
+A guide to markdown syntax is at http://daringfireball.net/projects/markdown/
+-->
+
+<div style="display: none" id="sourcetext">
+
+# 3D Modeling Techniques
+Reference: [digital] Modeling by William Vaughan, 2011
+
+William Vaughan is an award-winning artist, writer, director, and is currently the Academic Director at the Digital Animation and Visual Effects School at Universal Studios in Florida. Youtube channel: [link](https://www.youtube.com/user/TofuTheVeganZombie/about)  
+
+
+## No set way
+
+> An interesting fact in the digital modeling world is that no two artists use the same techniques when creating a digital model, even when the two modelers are working from the same reference material, producing the same final mesh. Consider this example: When I had classes of thirty students working on the same robot model, I never saw any two working with the same method. This just goes to show that there is no set way to work, and that artists are free to work with whatever method(s) they feel most comfortable with.
+
+## More methods
+
+> Don’t limit yourself to just a few modeling methods. Every professional digital modeler I know gravitates to a particular method of modeling for the majority of the meshes each is tasked with, but each modeler is quick to use other methods when needed. The more techniques you become proficient in, the more efficient you will become.
+
+# 3D modeling methods
+## Build out
+
+### Point by point
+![point](img/meth/point.png)
+
+### Edge extend
+![edge](img/meth/poy.png)
+
+## Primitive modeling
+![prim](img/meth/prim.png)
+![prim01](img/meth/primbox.png)
+
+## Box modeling
+![box](img/meth/box.png)
+![box01](img/meth/boxchar.png)
+
+## Patch modeling
+  
+![curve](img/meth/curve.png)
+>Using curves, you can create a wire cage to define the surface of an object.   
+
+![NURBS](img/meth/nurbs.png)
+
+## Digtial sculpting
+![scup](img/meth/zbrush.png)    
+>No consideration to the layout of polygons is needed when digital sculpting, leaving the artist’s focus on the shapes, not the underlying geometry.  
+  
+![normal](img/meth/normal.png)    
+>The high-poly meshes are used as source material to enhance low-poly models used in real-time games with the use of normal maps.
+
+### Video
+- [CG101: What is a Normal Map?](https://www.youtube.com/watch?v=yHzIx41eiD4)  
+
+### Reference
+- [Som Downs blog](http://somdowns.blogspot.ca/)
+- [Homrighausen: Game Art Thread blog](http://polycount.com/discussion/116222/homrighausen-game-art-thread)  
+________________
+
+## More on [normal maps](http://en.Wikipedia.org/wiki/Normal_mapping).
+
+![nor01](img/800px-Normal_map_example_with_scene_and_result.png)
+![nor02](img/800px-Normal_map_example.png)
+
+_________________
+
+## 3D Scanning
+### Contact scanners
+![cscan](img/meth/scan.png)
+### Non-contact scanners
+![ncscan](img/meth/scan01.png)
+![tomo](img/meth/tomo.png)
+![depthkit](img/depthkit.png)
+[DepthKit](http://www.depthkit.tv/): Depth Enabled Filmmaking Tool using a Kinect V2 and a high end SLR camera.
+
+## Modeling with texture and animation tools
+### Texture Displacement
+![disp](img/meth/disp.png)
+![hair](img/meth/hair.png)
+
+### Bones, lattice, and deformers
+![bone](img/meth/bone.png)
+
+### Dynamics
+![dynamic](img/meth/mic.png)
+
+All copyright of images are in [digital] Modeling by William Vaughan, 2011
+
+
+------------------------------
+<!--# 3D modeling fundamental
+## Topology 
+- A surface, a two-dimensional manifold, looks flat in a local view, but it can have a more-interesting global structure.
+
+- Topological objects are categorized by their genus (number of holes).
+
+	![topo01](img/maya/polygon01/topo01.jpg)   
+	
+### Definition
+
+- **Topology is the mathematical study of *shapes* and *spaces*.** It is a major area of mathematics concerned with the most basic properties of space, such as *connectedness*, *continuity* and *boundary*. It is the study of properties that are preserved under continuous deformations including stretching and bending, but not tearing or gluing. Topology developed as a field of study out of geometry and set theory, through analysis of such concepts as space, dimension, and transformation. 
+
+	e.g. a Möbius strip is a kind of object studied in topology which has only one surface and one edge.  
+	
+	![mobius](img/mobius_escher.gif)
+	- The gif clip is from [Mobius from mathcurve.com](http://www.mathcurve.com/surfaces/mobius/mobius.shtml)
+	
+- The definition of topology leads to the following mathematical joke (Renteln and Dundes 2005)	
+	
+	***"What is a topologist?""***  
+	***"Someone who cannot distinguish between a doughnut and a coffee cup."*** [Wolfram mathworld](http://mathworld.wolfram.com/Topology.html) [위상이란 무엇인가?](http://mathnmath.tistory.com/39)   
+
+	 ![torus](img/Mug_and_Torus_morph.gif)    
+	- This gif clip is from [Wikipedia](http://en.Wikipedia.org/wiki/Topology)
+
+- [Mathworld](http://mathworld.wolfram.com/classroom/TopologicalSpace.html): (1) The mathematical study of object's properties that are preserved through **deformations**, **twistings**, and **stretchings** of objects. Tearing, however, is not allowed. (2) A set along with a collection of subsets that satisfy several defining properties. 
+
+### More examples
+
+There are many surfaces with a variety of looks that are topologically the same.
+  
+![topo02](img/maya/polygon01/topo.jpg)   
+- The image is from [Math Hangout](http://mathhangout.weebly.com/stuff.html)
+
+
+- Check out more about topology from [Annenberg Learner website](http://www.learner.org/courses/mathilluminated/units/4/textbook/03.php)  
+
+--------------------------------------------
+## Booleans 
+Three boolean operations let you combine objects to make shapes that would otherwise be difficult to model using other techniques. You can add, subtract, or intersect objects to create a new, complex shape. [Examples](http://help.autodesk.com/view/MAYAUL/2018/ENU/?guid=GUID-7DADD144-6C29-4AE3-B877-A9947B2F26E0)
+
+### The example of Boolean process
+![boo01](img/maya/polygon/bl01.png) 
+
+### Different kinds of boolean operation 
+![boo01](img/maya/polygon/bl02.png)  -->
+
+# Smoothing Polygon surfaces
+- [Autodesk: Smoothing polygons](https://knowledge.autodesk.com/support/maya/learn-explore/caas/CloudHelp/cloudhelp/2018/ENU/Maya-Modeling/files/GUID-8A5D0FF0-9BA1-435F-A4CA-53183311B819-htm.html) 
+	- Smooth a mesh by adding new polygons
+	- Smooth mesh preview overview
+	- Subdiv proxy overview
+	- Smooth a mesh by averaging the distance between vertices
+	- Subdivision surface
+ 
+- Other than these methods, to see a smooth version of a model, you can soften the normals  too (Modeling // Mesh Display / Soften Edge).
+
+## Subdivision surface
+
+A subdivision surface lets you subdivide specific regions of a mesh, giving you the ability to finely tune or smooth certain areas without changing the entire mesh.
+
+Subdivision surfaces help you keep a lower polygon count because they only insert control points where you need them (instead of uniformly across the entire mesh). However, subdivision surfaces have the slowest performance of the three smoothing methods. 
+
+Note: Subdivision surfaces are largely unsupported in pipelines outside of Maya, so you need to convert them to polygons or NURBS before exporting to these pipelines. You can convert using either Modify > Convert Subdiv to Polygons or Modify > Convert Subdiv to NURBS.
+For more information on subdivision surfaces, see the [Subdivision Surfaces documentation archive](http://download.autodesk.com/us/support/files/subds.pdf).
+
+### OpenSubdiv 
+OpenSubdiv is an open-source subdivision method developed by Pixar that lets you work with a high-fidelity representation of your model with great accuracy and speed. As a professional standard in the animation industry, OpenSubdiv is implemented in a variety of software packages, improving interoperability by producing the same results when models are transferred between applications. In Maya, OpenSubdiv is the default subdivision method when you preview a smoothed mesh, smooth a mesh using Mesh > Smooth, or create a subdiv proxy.
+
+## Maya subdivision tutorial   
+- [Maya Subdivision Surfaces](https://www.youtube.com/watch?v=LpyJv8hhW_o&index=1&list=PL4fkBUcbgjGXSR7PUnjBuOSO3sDcLRF2F)  
+- [Intro to Maya and 3D Modeling - Lecture B: 5/13 - Subdivision and the Rule of 3](https://www.youtube.com/watch?v=70e-3bidL-w)
+
+------------------
+# More on NURBS modeling
+
+![aom_NURBS](img/lab/aom_nurbs.png)  
+
+Art of Maya. P 47.
+
+__________
+# Inspiration
+## Game of Thrones intro
+- [Official Show Open 1:41](https://www.youtube.com/watch?v=s7L2PVdrb_8)
+- [Extended Opening 4:27](https://www.youtube.com/watch?v=i9xKpUXbxfM&feature=iv&src_vid=B3vqcbJwgCI&annotation_id=annotation_96828)  
+- [Kirk Shintani from Elastic](http://www.artofvfx.com/?p=1659)
+- [Software used to create the intro of Game of Thrones , Quora](http://www.quora.com/What-software-was-used-to-create-the-intro-for-Game-of-Thrones-TV-series)
+
+## 3D artists
+- [Kenneth A. Huff](http://www.kennethahuff.com/) 
+- [Meats Meier](https://vimeo.com/53762767)   
+
+![meatsMeier](img/Incredible-3D-Art-02.jpg) 
+
+
+## Book
+- [Digital Art Masters](https://shop.3dtotal.com/books/digital-art-masters.html)  
+
+-----------------
+
+# Lab 
+## Lab practice: Polygon to subdivision & Shading
+- Organic modeling using the subdivision method.
+
+Reference image:
+
+![subd](img/lab/subd.png)  
+![subd02](img/lab/starfish01.png) 
+![subd01](img/lab/starfish.png)   
+![subd01](img/lab/starfish02.png) 
+
+## How to:
+	
+- Create a starfish geometry:
+	
+	- Start from Create / Polygon primitives / Prism: From the polyPrism node, change Number of Sides to 5.
+	- Apply Edit Mesh / Extrude: You can turn off Keep Faces Together and change its attributes to make a star. 
+	- Using the shortcut 1, 2, 3 to check [smooth mesh preview overview](https://knowledge.autodesk.com/support/maya/learn-explore/caas/CloudHelp/cloudhelp/2018/ENU/Maya/files/GUID-4863E5AE-0EA0-4596-B1AE-10C19603838E-htm.html): you can edit the shape.  
+	
+- UV layout
+	
+	- Let's work on the **UV layout in the UV texture**.
+	
+- Finalize the geometry
+	
+	- You can apply Edit Mesh / Transform to add a bit of irregularity to the shape.
+	- If you like the shape, you can **Mesh / Smooth** the star.
+
+- Shading
+	
+	- You can work on shading. [starfish texture](obj/starfish_tex.zip)  
+	
+______________
+## UV Practice
+### Dice 
+![tex](https://i.pinimg.com/236x/20/e4/f6/20e4f61196f156f6195afa59143dea81--hardwood-tile-engineered-hardwood.jpg)
+
+![texturing](img/lab/dice1.png)  
+![texturing](img/lab/dice2.png)  
+	  
+- [Coin Dice Template (UK)](https://www.earlylearninghq.org.uk/numeracy-resources/coins/coin-dice-uk/)  	![tex](https://www.earlylearninghq.org.uk/wp-content/uploads/2017/01/Coin-dice-prev.jpg)
+ 
+![texturing](img/lab/dice01.png)  
+![texturing](img/lab/dice02.png)  
+
+### Box texturing
+![tex](http://media.moddb.com/images/members/1/400/399748/skin_box.jpg)  
+
+![texturing](img/lab/box.png) 
+Rendered with Arnold renderer.
+ 
+![texturing](img/lab/box1.png)  
+Rendered with TURTLE renderer.  
+_____________________________	
+
+
+## Lab practice: Retro spaceship
+### Reference
+- [Retro Spaceship from shutterstock](https://www.shutterstock.com/search/retro+spaceship) 
+
+![NURBS](img/lab/spaceship.png)  
+
+## How to:
+- Spaceship body
+	- Create a NURBS sphere and transform/edit it (choose vertices and Hull) to make a shape.
+	- Duplicate the body and add it in the layer in the layer editor and make the layer invisible -> preserve the body geometry to use it later.
+	
+- Window: Project Curve on Surface
+	- Create a curve and transform it to your chosen position and size. Select it and the spaceship body to apply Surface / Project Curve on Surface 	
+	
+	![sapceship_04](img/lab/spaceship_project.png) 
+	
+- Window: Trim	
+	- Choose the spaceship body and apply Surface / Trim. You need to choose what to leave and press enter.
+
+	![sapceship_03](img/lab/spaceship_trim.png) 
+	
+- Window rim: duplicate the trim edge
+
+	- From the mouse left button menu on the body, choose the trim edge and select the window edge and apply Curve / Duplicate Surface Curves. 	
+	
+	![sapceship_02](img/lab/spaceship_edge.png) 
+	
+- Window rim geometry: Extrude
+	- Create a NURBS circle as a profile curve, and use the duplicated Curve as a profile, locate properly and apply Surface / Extrude. Check the option settings as below:
+	
+	![sapceship_01](img/lab/spaceship_extrude.png) 
+	
+	- You can edit the profile circle shape to make it look better. Now move the geometry to the window position. Duplicate it and scale z -1 and move it to the the opposite side to complete the window rim geometry.
+	
+- Three wings: similar steps to making the window rim 
+	- Create a circle and make a shape of the window intersection and apply Project Curve on Surface to the spaceship body.
+	
+	![sapceship_wing01](img/lab/spaceship_wing01.png) 
+	
+	- Duplicate Surface Curves and move its pivot to the top end. Duplicate it to around 5 curves.
+	
+	![sapceship_wing02](img/lab/spaceship_wing02.png) 
+	
+	- Transform them to the desired shape and select them all and apply Surface / Loft. 
+	
+	![sapceship_wing03](img/lab/spaceship_wing03.png) 
+	
+	- You can still edit the shape after Loft.
+	
+	![sapceship_wing04](img/lab/spaceship_wing04.png) 
+	
+- Duplicate wings
+	- Choose the completed wing geometry, and check 1. it's manipulator is at the center of the grid and 2. delete the history by Edit / Delete History, and use Duplicate Special to duplicate them and make three wings.
+	
+	![sapceship_wing05](img/lab/spaceship_wing05.png) 
+	 
+- Further exploration	 
+	- Other then Project Curve on Surface, you can use **intersect** between two geometries (here the sphere and the spaceship) to create a curve on a suface, leaving the geometry. Later you can use Trim to cut it out.
+
+	![sapceship_wing08](img/lab/spaceship_intersect.png)
+	![sapceship_wing10](img/lab/spaceship_trim01.png)  
+	
+	- You can use rebuild to increase the span numbers to make it more smooth geometrically.
+	
+	![sapceship_wing09](img/lab/spaceship_rebuild.png)
+	
+	- You can delete unused curves on a surface: select Isoparms from mouse left button and apply the delete key.
+	
+	![sapceship_wing06](img/lab/spaceship_delete.png) 
+	
+	- Now you can explore shading attributes to create the visual look you want. Here I used a ramp texture for a color attribute. And I attach a checker texture to the middle color of the ramp texture.
+	
+	![sapceship_wing07](img/lab/spaceship_texture.png) 
+	
+## Tutorial
+- [Collection Of Maya 3D Tutorials](https://www.smashingmagazine.com/2009/08/the-ultimate-collection-of-maya-3d-tutorials/)  
+- [Maya: How to trim NURBS surfaces | lynda.com tutorial by Lynda.com](https://www.youtube.com/watch?v=X2blYvA4NBY)
+
+
+## Assignment
+
+- Please upload your completed starfish modeling & shading rendering image(s) or spaceship modeling & shading image as we have practiced in class.
+
+	If it is a starfish subdivision modeling:
+
+	- Find, draw, or otherwise make your own starfish or spaceship textures to apply in the shading. Create an aggregation of starfishes showing different sizes, front and back faces, and various creative materials & textures. (Submit one aggregation rendering image and one or two close-up rendering image(s))
+
+	If it is a spaceship NURBS modeling:
+
+	- Create your modified creative version of a spaceship. Make sure you explore newer NURBS modeling techniques. Use various textures and materials. (Submit each overview and close-up rendering images)
+
+________________________
+
+# Mid-term project 
+Here we can share our mid-term projects to discuss further in class:
+	- [Google slide](https://docs.google.com/presentation/d/1NhzxHrr0N7HyHbtPWgs3MsIv8eisXT8jl8sM3NUzDQk/edit?usp=sharing)  
+
+# Final-term free-theme individual project (30%)
+## Due date: Dec 18th (11:59 pm).
+
+Choose what you want to make. You still need to consider schedule, difficulty, and efficiency. If you choose a complex subject to model, then focus on the complex modeling but reduce its environmental modeling to the minimum. In terms of difficulty, it is recommended to choose one or two steps higher than what you can make at the moment. That way you can explore some amount of creative research and the ways of solving problems. Also, when you choose your subject, don't forget to check how it can be done in Maya. Certain forms are easier to draw in computer graphics. Once you choose your subject, please prepare your drawings and visual research. Spend enough time for the pre-production step. You will find out large parts of your final work's quality depend on how thoroughly the pre-production steps went. Last but not least, consider the technical and aesthetic challenges plus the level of completion. Aesthetic challenges include your unique/creative/critical expressions based on your perspectives, and digital craftsmanship converging your analog practices into 3D practices. It would be great if viewers can detect your sensitive observation of the physical world as well as you keen understanding of 3D world (modeling and animation). You can use your mid-term assets to further develop for your final project or you can start from complete scratch. Show your color and dare to be unique while showing your 3D techniques.
+
+## What to submit: 
+
+Please collect your final work and related files into one folder.
+
+	- The name of folder: your school id_your name (e.g., 123456_your name)
+
+		- In the each folder:
+
+			- Your final rendered image: at least one side should be 1k pixel size, saved as JPG or PNG.  
+			- Your Maya project folder including only the Scene folder and the Sourceimage folder; in the Scene folder, there should be only the final Maya file (.mb or ma file); in the Sourceimage folder, with related materials such as textures. (Don't submit with all of your Maya files. Once the project is done, delete unused files so that the file size of your final submission is not too large: recommended file size is less than 20 mb.)  
+			- One page documentation PDF file, showing a) - a description of your choice and focus (your short artist statement), b) - the making and problem solving processes, and c) - your discoveries and achievements. 
+			- One 15 to 30 seconds animation: apply camera animation and you can use the Playblast to make a simple animation. Of course, you can add animation to objects if you want to. If the file is too large, please upload to your online space and add a link to it in your PDF documentation.   
+	
+	- Where to submit: please upload your assignment folder to Canvas.
+
+
+</div>
+<div id="wrapper">
+	
+	<div class="header">
+		
+		<h1>INTM3D</h1>		
+		<a href="index.html">Class outline</a><br/>
+		<a href="https://docs.google.com/spreadsheets/d/1ordfMYWu436oiZvY61ZD-aKLIGjm1hzmY7ndHkQPkUU/edit?usp=sharing">Attendance INTM-2016-001 Mon</a><br/>
+		<a href="https://docs.google.com/spreadsheets/d/1jAXPsR6__setsEp7VIRgO8SfaiTRRyrnVDjfDYiXYCw/edit?usp=sharing">Attendance INTM-2016-002 Wed</a><br/>
+		<a 
+href="https://www.lynda.com/SharedPlaylist/26abee798b454bd48a61d5b40c66c919?org=ocadu.ca">LinkedIn Learning tutorial</a><br/><br/>	
+		<h3>Class schedule</h3>	
+				<a href="week01.html">1: Introduction</a><br/>
+				<a href="week02.html">2: 3D modeling overview</a><br/>
+				<a href="week03.html">3: NURBS modeling</a><br/>
+				<a href="week04.html">4: Polygon modeling</a><br/>
+				<a href="week05.html">5: Shading</a><br/> 
+				<a href="week06.html">6: Rendering</a><br/>								
+				<a href="week07.html">7: Cinematography</a><br/>  
+				<a href="week08.html">8: Texturing</a><br/>
+				<a href="week09.html">9: Modeling techniques</a><br/>
+				<a href="week10.html">10: Animation I</a><br/>	
+				<a href="week11.html">11: Animation II</a><br/>	
+				<a href="week12.html">12: Physically Based Renderer</a><br/>
+	
+	</div>
+	<div class="section">
+		<script type="text/javascript">
+		//var converter = new Markdown.Converter();
+		var converter = new Showdown.converter();
+		document.write(converter.makeHtml($('#sourcetext').text()));
+		</script>
+	</div>
+	
+	<div class="footer">Haru (Hyunkyung) Ji, 2019</div>
+	
+</div>
+</body>
+</html>

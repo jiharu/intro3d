@@ -1,0 +1,756 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset='utf-8'>
+<title>3D Modelling & Animation</title>
+    
+<link href="css/site.css" media="all" rel="stylesheet" type="text/css" />
+<link href="css/highlight.default.css" media="all" rel="stylesheet" type="text/css" />
+  
+<script src="js/jquery.js"></script>
+<script src="js/showdown.js" type="text/javascript"></script>
+
+<link rel="icon" type="image/x-icon" href="favicon.ico" />
+</head>
+<body>
+<!--
+Write the markdown code below.
+A guide to markdown syntax is at http://daringfireball.net/projects/markdown/
+-->
+
+<div style="display: none" id="sourcetext">
+
+# Animation II
+## Goal
+- Understand the 3D production pipeline.
+
+___________________
+# Production pipeline
+Reference: [digital] Modeling Chapter 1 Introduction.
+## Stages of production
+
+- 3 Stages: no matter the size of the team or project, you will need a strong production pipeline.   
+	
+>  ![3 Stages](img/pipeline.png)    
+
+- __Pre-production:__ the pre-production stage is the process of preparing all the elements involved in a production and is the foundation of the project—the blueprint of the entire animation. The story and visual look of a project is developed at this stage, as well as the overall planning of the production.   
+ 
+- __Production:__ the production phase of the project is where final elements of the animation are initially created based on the work developed by the pre-production crew. It is the production crew’s job to stay true to the blueprint in place and to maintain the director’s vision. It’s also where the digital modeler comes into play in most production pipelines.
+
+- __Post-production:__ the post-production is the part of the process that may take the longest due to the refinement of all of the aspects of the final product. Although this is the last step in the production of an animation, it is key to a project’s success. Images get enhanced by compositing, the sound track and dialogue get tighter, and the edit gets tweaked for the most effective presentation of story and pacing. This is the point of the project that can make or break it and should not be taken lightly. It is what the production team loses the most sleep over.  
+	
+## Video 
+- [Digital-Tutors video link: 3D production pipeline](https://www.youtube.com/watch?v=UlQVPbC5iJ0)
+
+<!--
+_____________________
+## Pre-production
+- Story
+       
+- Visual design   
+
+![vis](img/pipe/vis.png)
+      
+- Storyboard     
+
+![storyb](img/pipe/story.png)  
+![storyb01](img/pipe/storyboard.png)   
+
+- Animatics
+
+-------------            
+## Production
+- Modeling     
+
+![model](img/pipe/character.png)
+![model01](img/pipe/character_concept.png)
+![model02](img/pipe/rig_cha.png)    
+    
+- Scene setup     
+
+![com](img/pipe/greenscreen.png)
+![com01](img/pipe/set.png)
+![com02](img/pipe/composite.png)   
+     
+- Texturing     
+
+![uv](img/pipe/uv.png)  
+     
+- Rigging     
+
+![rig](img/pipe/rig_char01.png)      
+![rig01](img/pipe/rig_face.png)    
+     
+- Animation        
+- Effects     
+
+![vfx](img/pipe/vfx.png)  
+        
+- Lighting       
+
+![light](img/pipe/light.png) 
+  
+- Rendering
+
+![light01](img/pipe/light01.png)
+
+------------
+## Post-production
+- Compositing
+- Final Delivery
+________________________
+
+## Good character design
+Reference: Creative character design by Bryan Tillman, 2011, Focal Press  
+
+- Archetypes: a hero, a beauty, a bad guy.., or part of yourself   
+	- Character bio: name, age, height, weight, build, nationality...   
+- Story and target audience: *the character is always in service to the story*   
+- Shapes: they can tell a story about the character visually.  
+- Reference    
+- Aesthetics & Details  
+- Originality  
+
+__________________
+## Character design templete
+Reference: Creative character design by Bryan Tillman, 2011, Focal Press 
+
+1. Gender
+2. Race
+3. Eye color
+4. Hair color
+5. Glasses or contact lenses
+6. Nationality
+7. Skin color
+8. Shape of face
+9. Distinguishing features
+10. Clothes: what/how does he/she wear?
+11. Mannerisms
+12. Habits
+13. Health
+14. Hobbies
+	
+__________
+## Inspiration
+- [Oktapodi](https://en.wikipedia.org/wiki/Oktapodi) is a 2007 French computer-animated short film, directed by Julien Bocabeille, François-Xavier Chanioux, Olivier Delabarre, Thierry Marchand, Quentin Marmier, and Emud Mokhberi. Music was composed by Kenny Wood.
+	- [youtube link](https://www.youtube.com/watch?v=badHUNl2HXU)  
+	- [Webpage / Gallery](http://www.oktapodi.com/gallery/) 
+	
+- Hyper realistic 3D modelling: [TERUYUKI AND YUKA](http://www.telyuka.com/)	
+
+## Reference
+
+[Maya 2016 online Help](http://help.autodesk.com/view/MAYAUL/2016/ENU//)    
+
+- Art of Maya [pdf link](http://web.cse.ohio-state.edu/~parent/classes/682/MAYA/art_of_maya.pdf)  
+
+## Advanced tutorial
+- [Maya: Professor - Poly Model Timelapse by Andrew Silke (36:01)](https://www.youtube.com/watch?v=5u1MnuCp6fM)
+- [Maya: Cartoon Head Topology by Andrew Silke (5:12)](https://www.youtube.com/watch?v=trZ2zxpM150)
+- [Maya: Cartoon Head Topology - Hack 'n' Slash (10:01)](https://www.youtube.com/watch?v=c2ybQtNlduE)
+- [How to Model Lips & Mouth (9:37)](https://www.youtube.com/watch?v=CiBGrpAI1gk)
+- [Speed Modeling Anna (Frozen) - In Maya (15:39)](https://www.youtube.com/watch?v=NBrBQbwiDn4)
+- [Maya Character Modeling Tutorial - Cartoon Mouse (# 1~4)](https://www.youtube.com/watch?v=2dLMctUGKXw)
+- [Modeling a Cartoon Cat in Maya - Part 1](https://www.youtube.com/watch?v=8Weir5-38tA)  
+- [Polygon & Subdivision Surface Modeling in Maya: The Mouse Embryo](http://www.molecularmovies.com/img/pdf_tutorials/MouseEmbryoModeling.pdf) 
+
+-->
+
+# Character modeling
+## Cinematic vs game model
+Models built for interactive 3D are primarily polygonal models that use controlled polygon counts to suit gaming engines. Some next-generation game engines already have support for Bezier geometry, and NURBS and Subdivision surfaces may soon follow. 
+
+![lod](img/lab/lod.png)  
+Cinematic model and game model. Image from the book Rigging for Games by Eyal Assaf.  
+
+___________
+
+# Joint system
+## Skeletons & Skinning
+**Skeletons** are hierarchical, articulated structures that let you pose and animate bound models. A skeleton for a human avatar provides a deformable model with the same underlying structure as the human skeleton gives the human body. 
+
+![skl](img/maya/kinematic/comp_aboutWhatSkeletons.png)
+
+Just like in the human body, the location of joints and the number of joints you add to a skeleton determine how the skeleton’s bound model or ‘body’ moves. When you bind a model to a skeleton, it is called **skinning**.
+
+
+### Skeleton components
+A skeleton is composed of a series of **joints** and **bones** that form joint chains. You can pose and animate these joint chains using IK (inverse kinematics) handles or by translating or rotating individual joints (FK: forward kinematics).
+
+![skl01](img/maya/kinematic/comp_jointBone.png)
+
+### Joints
+Joints are the building blocks of skeletons and their points of articulation. Also, joints have no shape and therefore can not be rendered. Each joint can have one or more bones attached to it, and a number of child joints. Joints let you transform a skeleton when posing and animating a bound model. 
+
+### Bones
+Bones do not have nodes, and they do not have a physical or calculable presence in your scene. Bones are only visual cues that illustrate the relationships between joints.
+
+### Joint chains
+A joint chain is any group of joints and their bones connected in a series. Joints are connected linearly, and their paths are drawn on screen by the bones. A joint chain begins at the highest joint in the chain’s hierarchy, and its bones are drawn pointing down the chain.
+
+![skl03](img/maya/kinematic/comp_aboutJointChain.png)  
+
+###Skeleton hierarchy
+A **parent joint** is any joint higher in a skeleton’s hierarchy than any of the other joints that are influenced by that joint’s actions. Joints below a parent joint in the skeleton hierarchy are called **child joints**. Joints at the top of bones are always parents, and joints at the bottom of bones are always children. Parent joints drive the transformations of their respective child joints. Thus, when you translate or rotate a parent joint, you also translate or rotate all of its child joints.
+
+![hier](img/maya/kinematic/hier.png)
+
+The **root joint** is the highest joint in a skeleton’s hierarchy. A skeleton can have only *one* root joint. You can move and orient the entire skeleton in world space by translating and rotating the root joint.
+
+![root](img/maya/kinematic/root.png)
+
+
+# Kinematics
+***Kinematics*** is the study of the motion of objects. This is related to, but distinguished from, dynamics in that kinematics studies only the way in which objects move and not the cause of the objects’ motion. In 3D computer graphics, the term kinematics describes how joints can be moved to animate objects and characters. There are two main types of kinematics: ***forward kinematics*** and ***inverse kinematics***.
+
+## FK & IK
+
+The term forward kinematics (FK) refers to a situation in which each joint in the chain inherits the motion of its parent joint. Thus, if you have four joints in a chain, when you rotate the root, the three child joints move based on the rotation of the root. When you rotate the second joint, the third and fourth joints inherit the motion of the second.
+
+Inverse kinematics (IK) cause the joints in a chain to orient themselves based on the position of a goal known as the end effector. 
+
+Inverse kinematics can be a more intuitive technique than forward kinematics in many situations. When used on legs, the Sticky option for inverse kinematics can prevent joints from penetrating the floor or sliding during a walk cycle. 
+
+## Inverse kinematics
+With inverse kinematics (IK), you move an ***IK handle*** to pose an entire joint chain. An IK handle is an object you can select and move that affects the joints it is assigned to. A joint chain that has an IK handle is called an ***IK chain***. When you pose and animate a joint chain with an IK handle, the IK solver automatically rotates all the joints in the IK chain. The ***IK solver*** is what Maya uses to calculate the rotations of all the joints in the IK chain when you position the IK handle. 
+
+- [Inverse Kinematics in Maya](https://www.youtube.com/watch?v=u6ZCoiMTCSI)
+
+# Skinning
+
+Skinning (Binding) is the process of attaching a mesh to a skeleton. It is probably the most common type of mesh deformation with the use of joints, since it offers the most amount of flexibility. The setup is more time-consuming and complex than other methods, but the end results will be as detailed as you like to make them.
+
+## Direct or indirect skinning
+
+- **Direct skinning**: the mesh is bound directly to the joint. The vertices of the mesh get weighted by the joints around them.   
+- **Indirect skinning**: a deformer such as a lattice or a wrap deformer gets bound to the joint, and in turn they affect the underlying mesh.
+
+## Three types of (direct) skinning 
+
+- **Rigid binding:** this allows a vertex to only have one joint influence it.
+It is an old method of skinning, still good for mechanical objects, and computes extremely efficiently.  
+- **Smooth binding:** this allows a vertex to have multiple joints influence it. You can paint smooth weights to fine tune the vertex/joint assignments. This “painting weights” is usually what is referred to when someone says they are “skinning.”  
+- **Interactive skin binding (an extension of smooth binding):** The workflow for this is to do an interactive skin bind first. This method also allows you to paint weights for finer tuning after completing first rough adjustments with the interactive tool.
+
+When testing skinning, sometimes you may notice that you don’t have enough places for your mesh to deform. If this is the case, you’ll need to insert some additional geometry (perhaps through something like the Insert Edge Loop Tool, or increasing subdivisions.)
+
+![rg](img/maya/skinning/rigid.png)   
+Bind Skin: rigid binding emulation. Max influences: 1, Second joint rotate Z: 45. 
+
+![sm](img/maya/skinning/smooth.png)
+Bind Skin: smooth binding emulation. Max influences: 5, second joint rotate Z: 45. 
+It also shows you the local joint orientations. How to see in the edit mode: select joints and push two buttons shown from the above figure. 
+
+## Joint orientation
+One of the most important aspects of setting joints in Maya is to understand the concept of joint orientation. When an object is created in Maya, by default its pivot point is aligned to the World axis. Joints, on the other hand, have the ability to have their pivots created based on user input through the *Orientation Settings* and by *drawing the subsequent joints in the chain*. 
+
+To see the joint orientations in the object mode:
+
+1. Click on the root joint in the chain.  
+2. Then select Select > Hierarchy. Once all the joints are selected, select Display > Transform Display > Local Rotation Axes. This will display the actual orientations of the axes on the selected joints. 
+
+How to change the local axis:
+
+- You can use Skeleton > [Orient Joint](http://help.autodesk.com/view/MAYAUL/2016/ENU//index.html?guid=GUID-29DF5D0F-1BDE-4464-850C-45769B3CF1CA).  
+- Change it manually: make the local axes visible in the edit mode by selecting joints and push the component button and '?' button together in the status line. With the rotation tool, you can rotate to change the local axis. However, often it is not recommended. Check the below tutorial.
+
+### Reference
+- [ABOUT MAYA JOINT ORIENT by Rigging Dojo](http://www.riggingdojo.com/2014/10/03/everything-thought-knew-maya-joint-orient-wrong/)
+
+# Controlling skin weights
+## Painting weights
+***Painting weights*** is the process of using a brush to paint values of color on the surface of the model to distinguish which areas are affected by the joints in the skeleton. Carefully painting smooth values in turn gives us smooth deformation in our model. 
+
+>Painting skin weights is a journey. When it’s working right, effective skin weights are magic as suddenly the character feels alive. But it takes a while to get them right. Even when you think they are right, once the character starts to animate, new problems will appear that weren’t obvious in the painting process.. A sloppy skin weight will forever affect the look of the animations you make with this rig. Getting it right is important. 
+- from Getting Started in 3D with Maya by Adam Watkins, Focal Press, 2012
+
+![paint](img/maya/skinning/paint.png)   
+
+### Maya help
+- [Common Artisan Brush Tool Settings](https://knowledge.autodesk.com/support/maya/learn-explore/caas/CloudHelp/cloudhelp/2015/ENU/Maya/files/GUID-67B8F095-4A0E-4BAE-938C-CB41B3EBD533-htm.html)  
+
+## Component editor
+
+The most common way of editing the rigid weights (each mesh point is influenced by only one joint (in the Bind skin option, the max influence should bet set to 1.) is through the use of the Component Editor (Window > General Editors > Component Editor).
+
+![lego](img/maya/skinning/lego.png)   
+
+_____________________
+# Rigging and character set-up
+The character’s mechanics must be convincing to an audience and the skin and clothing
+must also move and bend properly. Maya includes a number of tools that help you
+manage the parts that make up a typical character. This process of preparing character
+controls is called ***rigging*** and is used to let the animator focus on the process of animating.
+A fully rigged character can be quite complex as it brings together skeleton joints, surfaces,
+deformers, expressions, Set Driven Key, constraints, IK, BlendShapes, etc.
+
+- [Example: Rigging Demo Reel by Hassan Bensmaine](http://www.cgmeetup.net/home/rigging-demo-reel-by-hassan-bensmaine/)  
+- [Tutorial: Basic Character Animation by Tales of Nalstone](https://www.youtube.com/watch?v=3tyQpoZsAJ4)   
+
+### Control set-up
+![cs02](img/maya/kinematic/controll.png)
+
+### Control set-up for a walking man
+![kinect](img/maya/kinematic/kinematic.png)
+
+## HIK
+Human Inverse Kinematics (HIK) is used for full-body inverse kinematics. This system creates IK Handles that control an entire biped or quadruped skeleton rather than using multiple IK chains on individual limbs. 
+
+![hik01](img/maya/skinning/hik01.png)
+
+It is a powerful system capable of producing smooth animations quickly. In addition, the time it takes to set up a full-body IK skeleton is a fraction of the time needed to create your own rig. HIK is a plug-in, but it is loaded automatically by default.
+
+Perhaps the greatest strength of the HIK system is its ability to retarget animations from one character to another. Characters of different sizes and proportions can swap motions. 
+
+### Skeleton generator
+The HIK tools allow you to create a custom skeleton and rig or use the system’s Skeleton Generator. Bipedal or quadrupedal characters can be created, but all must be in a **T-pose** or **T-stance** looking toward **the positive z-axis**. The HIK system also requires a standard set of 15 bones. 
+
+![hik](img/maya/kinematic/comp_nodes_figure.png)
+
+
+### Character controls
+
+![hik05](img/lab/hik05.png)	
+
+The HIK system comes with a Character Controls panel that allows you to select the control handles of your character quickly and easily and to toggle among FK, IK, and full body IK. You can also click the encircled arrows to see exploded views of the hands and feet.
+
+Within the Character Controls panel is a row of icons located above the Skeleton, Definition, and Controls tabs. The first two icons allow you to toggle the **visibility** of the FK handles and bones. The next icon toggles the visibility of the full body skeleton. By default, this is turned off. Go ahead and choose the Show/Hide Skeleton icon to display the full-body skeleton. Since it appears under the FK bones, click the Show/Hide FK icon to turn the FK bones off.
+
+The next three icons—Full Body, Body Part, and Selection—control the **functionality** of the control handles on the character. Starting in reverse order, the Selection icon allows you to move a handle without having the bones follow along. The next, Body Part, treats the bones connected to the selected handle as an ordinary IK system. Choose this icon, and select the left wrist handle. You can select the wrist handle through a viewport or from the humanoid image within the Character Controls panel. Use the Move tool to see how it affects the skeleton. Use Undo to return the skeleton to its default position. Now select the Full Body icon, and move the wrist handle again. Notice the difference.
+
+## Related reference
+
+- [Prepare an existing skeleton for HumanIK](http://help.autodesk.com/view/MAYAUL/2016/ENU/?guid=GUID-8D27BAFD-7785-4173-860E-515FEB2E9C98)  
+- [Create and define a HumanIK skeleton](http://help.autodesk.com/view/MAYAUL/2016/ENU/?guid=GUID-795BDC06-8A1D-4D58-B55D-FD88D9B5A022)   
+- [Free Maya rigs](http://www.cgmeetup.net/home/ultimate-rigs-maya-rigs-maya-character-rigs-free-maya-rigs/)  
+- [Rig a Fish in Maya](http://cgi.tutsplus.com/tutorials/rig-a-fish-in-maya--cms-20873)  
+- [Mery Rig – Free Maya Character Rig, Female Character rig](http://www.cgmeetup.net/home/mery-rig-free-maya-character-rig-female-character-rig/)  
+- [Basic Character Rigging](https://courses.cs.washington.edu/courses/cse460/05sp/links/Rigging/basic_character.html)
+
+_________________
+
+## Mixamo
+Mixamo develops and sells web-based services for 3D character animation. Mixamo's technologies use machine learning methods to automate the steps of the character animation process, including 3D modeling to rigging and 3D animation.
+
+This is where you can find automated, finished characters & animations:
+
+- [Mixamo](https://www.mixamo.com/)
+
+______________________________
+
+## Inspiration
+- 3D animated short films for your inspiration: 
+	- [link 1](http://webneel.com/25-best-and-award-winning-3d-animated-short-films-your-inspiration)  
+	- [link 2](https://www.shortoftheweek.com/channels/3d-animation/) 
+______________________________
+
+# Lab
+## Animation Turntable
+ - [Maya Animation Turntable Options](http://help.autodesk.com/view/MAYAUL/2018/ENU//index.html?guid=GUID-858ECD08-AB1D-4F25-8519-CDC19CEA7ACF)    
+- Under the *Animation* module set, let's add ***Visualize/Create Turntable..***
+- Let's change our *Workspace* into *Animation* where you can find the Graph Editor window. 
+
+### Creating a turntable camera
+
+![turntable](img/maya/turntable.png) 
+![turntable](img/maya/workspace.png) 
+
+### Understanding Graph editor
+
+![turntable](img/maya/grapheditor.png) 
+
+### Making an animation infinite
+
+![turntable](img/maya/infinity.png) 
+![turntable](img/maya/cycle.png) 
+
+### Making Playblast animation
+
+- [Maya: Playblast an animation](http://help.autodesk.com/view/MAYAUL/2018/ENU//index.html?guid=GUID-1C6EDC8D-DA67-490E-81F1-1205336DEBD9)  
+
+A Playblast is a quick preview that lets you make a "sketch" of your animation, providing a realistic idea of your final render result without requiring the time needed for a formal render. Playblasting gives you a fast way to evaluate your work on the fly, taking a screen grab of the animation in the viewport at each frame during playback, and then “blasting” those images to an image viewer.
+
+
+![turntable](img/maya/playblast01.png) 
+![turntable](img/maya/playblast02.png) 
+
+__________________________
+
+
+### Camera or airplane animation
+When you add a camera or airplane to a scene, you should imagine how the shot will be composed and whether the camera will be animated. 
+
+![path01](img/lab/motionpath03.png)
+![path02](img/lab/motionpath02.png)  
+
+- You can animate the camera using the 'Attach motion path' method, and keyframing on the 'aim vector' of the camera.  
+- Or you can animate the camera and use the 'Set motion path key' method to make a motion path animation. 
+
+### Using MEL (Maya Embedded Language) to create objects:
+
+```
+int $i;
+int $j;
+int $k;
+int $n = 8; // decide the iteration number
+int $d = 5; // control the distance
+float $r = 4; // change the random value
+
+for ($k = 0; $k < $n; $k++){ 
+    for ($j = 0; $j < $n; $j++){
+        for ($i = 0; $i < $n; $i++){
+           polyCube -w 1 -h 1 -d 1 -name "poly"; //polySphere -r 1
+           move -x ($i*$d+rand($r)) -y ($j*$d+rand($r)) -z ($k*$d+rand($r));
+        }
+    }
+}
+```
+
+How to apply: write the MEL in the script editor, select them, and 'command + enter' to execute. 
+
+### Camera crane animation
+
+![crane](img/maya/deformer/crane.png) 
+
+### Creating a Maya camera dolly rig
+- [Autodesk tutorial](https://area.autodesk.com/tutorials/creating-a-maya-camera-dolly-rig/)  
+
+### Camera animation video tutorial
+- [4 Tips for Camera Animation (for Maya or any other 3D software) by Bloop Animation](https://www.youtube.com/watch?v=b3PHRNvwl4A&t=3s) 
+
+
+- [Camera Shake by Henry Medhurst](https://www.youtube.com/watch?v=6AS1PJlcHAE)    
+	MEL expression for a simple shaking camera: 
+
+```	
+cameraShape1.horizontalShake = noise(frame*0.7)/30; 
+```
+	
+Or 
+
+```	
+float $min = rand (-0.1, -0.3);  
+float $max = rand (0.1, 0.3);  
+if (frame <= 60){  
+	camera1.translateX = rand($min, $max);  
+	camera1.translateY = rand($min, $max);  
+	camera1.translateZ = rand($min, $max);  
+} else {  
+	camera1.translateX = 0;  
+	camera1.translateY = 0;  
+	camera1.translateZ = 0;  
+}  
+```
+
+<!--
+
+- Lab practice: Chracter modeling & texturing - a Lego character.
+
+_________________________
+## Lab practice A: Hard modeling
+![lab01](img/maya/character/legoman.jpg)    
+![lab03](img/maya/character/legoman_front.png) ![lab04](img/maya/character/legoman_side.png)  
+![lab03_01](img/maya/character/legoman_front01.png) 
+![lab04_01](img/maya/character/legoman_side01.png)
+![lab05](img/maya/character/spiderman_front.jpg)  
+![lab06](img/maya/character/spiderman_back.jpg) 
+![lab07](img/maya/character/spiderman_side.jpg) 
+
+## What to do:
+- Preparation
+- Low polygon modeling
+- UV texturing
+- Shading, lighting, and rendering controls
+- Smoothing the polygon
+
+## Important commands and tips:
+- Commands:
+	- Extrude
+	- Booleans
+	- Selections
+	- Deformers
+- Tips:
+	- Spend some time to **analyze and plan** before beginning the modeling processes. 
+	- Well prepared blueprints are important to the modeling processes.	
+	- Switch often to check its position from the side, front, and perspective view.
+	- Menu / Select tools are useful and efficient.
+	- Naming: in the outline and layer editor, from time to time spend some time to name them properly. It will help a lot to work on more complex modeling tasks.   
+	- Using Layer editor and Shading options to control its **transparent/opaque views** and **templete/reference/object** view & selection modes.
+
+__________________________
+
+## Preparation
+- Prepare the front and side images of a Lego model.
+- Importing blueprints to a front camera and a side camera (View / Image Plane).
+
+![pre](img/maya/character/imageplane.png) 
+
+- You can adjust the image plane position: using the Image Center X, Y, or Z.   
+And check out the attributes of the image plane from its attribute editor. 
+	
+![pre01](img/maya/character/imageplane01.png) 
+
+__________________
+
+## Low polygon modeling
+### Head
+- Create from a cylinder polygon object and modify its position and scale. (subdiv: 12) 
+- From the front view, go to the component face selection mode and drag - select faces and from the menu Select / Shrink to select only top faces or neck faces and apply Edit Mesh / **Extrude**. Click its local / world switch and move & scale and apply Extrude to make the head-top or neck geometry: ***Be careful not to apply several extrude commands at once. It is easy to do so. Use Undo to make sure that you didn't multi-fully applied the same function.***
+ 
+ 
+![head](img/maya/character/ext.png)  
+
+### Body
+- Start from a box. Move & scale it and use its vertices to make the right shape.  
+
+![body](img/maya/character/body.png)  
+
+- Use Extrude to make the lower body.
+
+### Middle belt piece
+![belt](img/maya/character/belt.png)  
+ 
+- From the side view, let's start a cylinder to make the lower part of belt. 
+- Create a box for a belt and apply Mesh / **Booleans / Union** to make an unified geometry.
+
+### Leg
+- Create a cylinder and go to the side view and locate it.
+
+![leg01](img/maya/character/leg01.png)  
+
+- In the component mode, select faces as the image below and delete them.
+
+![leg02](img/maya/character/leg02.png)  
+
+- Select the edge and extrude.
+
+![leg03](img/maya/character/leg03.png)  
+
+- Select the edge and extrude several times to make the faces of the leg as the image below using the front and side view.
+
+![leg04](img/maya/character/leg04.png)  
+![leg05](img/maya/character/leg05.png)  
+
+- Apply the **Mesh Tools / Append to Polygon** to create the bottom face of the leg. After this, apply the **Mesh / Fill Hole** to create the closed mesh.  
+
+![leg06](img/maya/character/leg06.png)  
+
+- Now create a box to prepare the Boolean operation. Create a box bigger than the leg we created and from the front view, rotate it as the image plane. Select the leg and the shift select the box and apply Mesh / **Booleans / Difference.** 
+
+![leg07](img/maya/character/leg07.png)  
+
+- This time create a cylinder which is a bit larger than the lower belt part and select the leg and the cylinder and apply Mesh / **Booleans / Difference.** 
+
+![leg08](img/maya/character/leg08.png) 
+
+- Now right leg is done. Before duplicating it, let's clean it. Go to Edit and **Delete by Type / History.** 
+  
+![leg09](img/maya/character/leg09.png)  
+
+- In order to use the duplicate special, let's **reset Transformation** to make the manipulator locate in the world center.
+ 
+![leg10](img/maya/character/leg10.png)  
+
+- Let's duplicate special. Note that scale X value is -1. 
+
+![leg11](img/maya/character/leg11.png)  
+
+- Great! Now we completed the legs. 
+- Plus, we can duplicate legs and make them a bit larger and apply Booleans / Difference to the belt to complete the belt.
+
+![leg12](img/maya/character/leg12.png)  
+
+___________________
+
+### Arm
+- Let's create a sphere and delete its faces to fit the contour of the image plane. 
+- Then, extrude the edge three times (choose one edge and apply **Select / Contiguous Edges** to select the entire edge perimeter) to make a base arm mesh. (when you apply the second extrude, increase its Divisions to 4 to make more lines for its deformation later.)
+
+![arm01](img/maya/character/arm01.png)  
+
+- Now apply **Deform / Lattice** to shape the arm. You can control the grid complexity using S, T, U divisions and its components are the Lattice Point. Using the lattice points, you can control and shape the main geometry.   
+
+![arm02](img/maya/character/arm02.png)  
+![arm03](img/maya/character/arm03.png)  
+![arm04](img/maya/character/arm04.png)  
+
+- Once shaping the arm is done, apply Mesh / Fill Hole to close it. 
+
+![arm05](img/maya/character/arm05.png)  
+
+- You can use the sculpt tool to add more fine controls. 
+
+![arm06](img/maya/character/arm06.png) 
+
+### Hand
+- Preparation: let's start from a Polygon Pipe. Transform it and then in the component mode, delete faces to shape it. You can apply Mesh / Fill Hole to close the mesh. 
+
+- Once it's done, you can apply lattices not only to an object but also to selected faces to deform. I applied the lattice to inner faces once and to outer faces again.   
+
+![hand01](img/maya/character/hand01.png) 
+
+- When the hand is done, you can extrude the face from the arm to make a wrist. Then apply Booleans / Union to complete. 
+ 
+![hand02](img/maya/character/hand02.png) 
+
+- Duplication: now delete its history and apply Reset Transformations and apply duplicate it with -1 scale X to complete both arms.  
+
+![hand03](img/maya/character/hand03.png)  
+![hand04](img/maya/character/hand04.png) 
+
+- *Congratulations!* The low polygon modeling is completed. Before starting the UV layout, please delete all histories and work on naming in the outliner and layer editor.
+
+![hand05](img/maya/character/hand05.png) 
+
+
+
+## UV layout & texturing
+![uv01](img/maya/character/uv01.png) 
+
+- You can download a Lego uv texture from [LEGO Universe Wiki is a Fandom Games Community](http://legouniverse.wikia.com/wiki/File:Torsos_NPC_VandaDarkflame_I5.png)
+Content is available under CC-BY-SA. 
+
+- For this tutorial, [Vanda Darkflame character](http://legouniverse.wikia.com/wiki/Vanda_Darkflame) texture is used.
+
+- [Custom Minifig Textures](http://nexusadventures.wikia.com/wiki/User_blog:Ferfature/Custom_Minifig_Textures) 
+
+### Preparation
+- Create 5 materials and apply each material to a head, a body, a belt, legs, and arms respectively.
+
+- Link the texture from the color attributes for all materials.
+
+- Work on panel layouts for a comfortable workflow.
+
+### Planar UV mapping
+- Let's apply planar uv mapping for each part and move the uv shells to proper parts. 
+- Then from a camera view, select the face which has a texture from the Lego geometry and apply **Select / Convert Selection / To Edge Perimeter.**  
+
+![uv02](img/maya/character/uv02.png)  
+
+- Move to the UV texture editor and apply UV Edtor / Polygon / Cut UV Edges.
+
+![uv03](img/maya/character/uv03.png)  
+
+- In the UV texture editor, choose Shell from the component mode, and select & move around to find the cut shell.
+  
+![uv04](img/maya/character/uv04.png)  
+
+- Move the shell and select UV from the component mode and move UVs to map the texture to the UV layout.
+- Repeat the same process to the head, body, belt, and legs.
+  
+![uv05](img/maya/character/uv05.png) 
+
+- For the arms, which have more geometry faces, you can select a few faces and use Select / Grow or Shrink and other commands to make the selection processes efficient.
+ 
+![uv06](img/maya/character/uv06.png)  
+![uv07](img/maya/character/uv07.png)  
+
+
+
+## Shading, lighting, and rendering
+- Let's work on the cinematography. Create lights and soft shadows. 
+	- In the below rendering, one directional and one ambient light were used.
+- Make a rendering quality high.
+	- In the render settings, make the Anti-aliasing quality to the production quality.
+- Let's tweak the shading parameters to make it look good.
+- You can create an environment such as a ground and a sky too.
+
+![sh01](img/maya/character/lego.jpg)  
+
+- Let's switch to the Maya Vector render.
+	- Tweak the Fill Options and Edge Options in the render settings.
+
+![sh02](img/maya/character/lego_vec01.png)  
+![sh03](img/maya/character/lego_vec02.png)  
+
+
+
+## Smoothing
+
+- Let's apply Bevel to the Edge loop to add smoother lines.
+ 
+![sm01](img/maya/character/sm01.png) 
+![sm02](img/maya/character/sm02.png) 
+
+- Optionally, you can apply Mesh / Smooth Proxy / Subdiv Proxy.
+From the option box, you can create layers which can divide the subdiv surfaces from its low polygon geometry.  
+
+![sd01](img/maya/character/sd01.png) 
+
+- To keep the boundary, you can use Mesh / Smooth Proxy / Crease Tool. When you apply, you need choose edges from the component mode and drag while holding a mouse middle button to decide its intensity.
+  
+![sd02](img/maya/character/sd02.png) 
+
+- Please compare the low poly, its exponential level is one or two in the PolySmoothProxy node.
+
+![sd03](img/maya/character/sd03.png) 
+![sd04](img/maya/character/sd04.png) 
+
+- ***Congratualtions! It's completed!***
+
+______________________________
+
+## Lego related reference
+- [Lego Man 3D Minifig Reference
+by Quandtum](http://quandtum.deviantart.com/art/Lego-Man-3D-Minifig-Reference-145171513) 
+- [Anatomy Of A Lego Minifig](http://wtf.thebizzare.com/offbeat/uncategorized/anatomy-of-a-lego-minifig/)  
+- [LEGO-Textures: Textures scanned from real LEGO bricks!](https://github.com/rioforce/LEGO-Textures)  
+- [CgTrader](https://www.cgtrader.com/3d-models/sport-hobby/toy/lego-man-collection-10-characters)  
+- [LEGO HEAD DECALS](http://fantasticpixcool.com/lego+head+decals)  
+- [Base Lego Model](https://3docean.net/item/base-lego-model/8762731)  
+- [Lego Minifig 3D Model](https://www.creativecrash.com/3d-model/lego-minifig-3d-model)  
+
+
+## Lab work to do
+- Review & practice based on today's lecture & lab class material.  
+- Let's prepare project 2 & 3 
+	- Project 2: the completion of project 1
+	- Project 3: free theme modeling & rendering. 
+	- [Project link](project.html)
+	
+
+
+## Assignment
+- By Sunday Nov 13th midnight, please complete your lego modeling (up to what we have worked in the class) and prepare your customized lego texture for the next class (representing you as a lego character) and upload the **rendering image(s)** to the class Tumblr with simple descriptions: **"a09 by your name, date"**.	
+-->
+
+
+</div>
+<div id="wrapper">
+	
+	<div class="header">
+		
+		<h1>INTM3D</h1>		
+		<a href="index.html">Class outline</a><br/>
+		<a href="https://docs.google.com/spreadsheets/d/1ordfMYWu436oiZvY61ZD-aKLIGjm1hzmY7ndHkQPkUU/edit?usp=sharing">Attendance INTM-2016-001 Mon</a><br/>
+		<a href="https://docs.google.com/spreadsheets/d/1jAXPsR6__setsEp7VIRgO8SfaiTRRyrnVDjfDYiXYCw/edit?usp=sharing">Attendance INTM-2016-002 Wed</a><br/>
+		<a 
+href="https://www.lynda.com/SharedPlaylist/26abee798b454bd48a61d5b40c66c919?org=ocadu.ca">LinkedIn Learning tutorial</a><br/><br/>	
+		<h3>Class schedule</h3>	
+				<a href="week01.html">1: Introduction</a><br/>
+				<a href="week02.html">2: 3D modeling overview</a><br/>
+				<a href="week03.html">3: NURBS modeling</a><br/>
+				<a href="week04.html">4: Polygon modeling</a><br/>
+				<a href="week05.html">5: Shading</a><br/> 
+				<a href="week06.html">6: Rendering</a><br/>								
+				<a href="week07.html">7: Cinematography</a><br/>  
+				<a href="week08.html">8: Texturing</a><br/>
+				<a href="week10.html">9: Animation I</a><br/>	
+				<a href="week11.html">10: Animation II</a><br/>
+				<a href="week12.html">11: Review & more</a><br/>
+                <!--<a href="week09.html">9: Modeling techniques</a><br/>-->
+	
+	</div>
+	<div class="section">
+		<script type="text/javascript">
+		//var converter = new Markdown.Converter();
+		var converter = new Showdown.converter();
+		document.write(converter.makeHtml($('#sourcetext').text()));
+		</script>
+	</div>
+	
+	<div class="footer">Haru (Hyunkyung) Ji, 2019</div>
+	
+</div>
+</body>
+</html>
